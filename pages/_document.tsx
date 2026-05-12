@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta
           name="description"
           content="The Internet Money Wallet — multi-chain, self-custodial, with native swap, bridge, and Bitcoin support."
