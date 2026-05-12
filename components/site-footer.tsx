@@ -12,13 +12,13 @@ export function SiteFooter() {
         </div>
         <div className="flex items-center gap-5 text-muted-foreground">
           <a href="#" aria-label="Twitter" className="hover:text-foreground transition-colors">
-            <Twitter className="w-4 h-4" />
+            <Twitter className="w-5 h-5" />
           </a>
           <a href="#" aria-label="Telegram" className="hover:text-foreground transition-colors">
-            <Send className="w-4 h-4" />
+            <Send className="w-5 h-5" />
           </a>
           <a href="#" aria-label="YouTube" className="hover:text-foreground transition-colors">
-            <Youtube className="w-4 h-4" />
+            <Youtube className="w-5 h-5" />
           </a>
         </div>
       </div>
