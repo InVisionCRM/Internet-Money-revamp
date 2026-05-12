@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode — mapped from your schema */
+    --background: 0 0% 96.1%;          /* #f5f5f5 */
+    --foreground: 0 0% 10.2%;          /* #1A1A1A */
+    --card: 0 0% 100%;                 /* #ffffff */
+    --card-foreground: 0 0% 10.2%;
+    --primary: 0 0% 10.2%;             /* #1A1A1A — dark button bg */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 100%;            /* #ffffff */
+    --secondary-foreground: 0 0% 10.2%;
+    --muted: 0 0% 100%;
+    --muted-foreground: 0 0% 42%;      /* #6b6b6b */
+    --accent: 226 91% 59%;             /* #3861f6 */
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 80.4%;              /* #CDCDCD */
+    --input: 0 0% 80.4%;
+    --ring: 226 91% 59%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark mode — mapped from your schema */
+    --background: 220 4% 7.8%;         /* #121314 */
+    --foreground: 0 0% 90.2%;          /* #E6E6E6 */
+    --card: 220 3% 14.7%;              /* #232426 */
+    --card-foreground: 0 0% 90.2%;
+    --primary: 0 0% 90.2%;
+    --primary-foreground: 220 4% 7.8%;
+    --secondary: 220 3% 14.7%;
+    --secondary-foreground: 0 0% 90.2%;
+    --muted: 220 3% 14.7%;
+    --muted-foreground: 0 0% 70.2%;    /* #b3b3b3 */
+    --accent: 196 100% 50%;            /* #00B4FF */
+    --accent-foreground: 220 4% 7.8%;
+    --border: 220 3% 17.6%;            /* #2C2D2F */
+    --input: 220 3% 17.6%;
+    --ring: 196 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Soft accent glow under floating phones */
+.accent-glow {
+  position: absolute;
+  inset: auto 0 -20px 0;
+  height: 60px;
+  background: radial-gradient(ellipse at center, hsl(var(--accent) / 0.18), transparent 70%);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: -1;
+}
